@@ -1,0 +1,17 @@
+{
+  "$id": "classpath:/schemas/yamlgreet__main-schema.json",
+  "title": "Data Input Schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "message": {
+      "title": "Message",
+      "description": "output message for the UI to display in Markdown format",
+      "type": "string"
+    },
+    "greeting": {
+      "type": "string"
+    }
+  },
+  "required": ["message"]
+}

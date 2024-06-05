@@ -1,9 +1,10 @@
 id: yamlgreet
-version: '1.0'
-specVersion: '0.8'
+version: "1.0"
+specVersion: "0.8"
 name: Greeting workflow
 description: YAML based greeting workflow
 dataInputSchema: schemas/yamlgreet__main-schema.json
+dataOutputSchema: schemas/yamlgreet__output-schema.json
 start: ChooseOnLanguage
 functions:
   - name: greetFunction
@@ -22,12 +23,14 @@ states:
   - name: GreetInEnglish
     type: inject
     data:
-      greeting: 'Hello from YAML Workflow, '
+      greeting: "Hello from YAML Workflow, "
+      message: "#Hello ##Hello from YAML Workflow"
     transition: GreetPerson
   - name: GreetInSpanish
     type: inject
     data:
-      greeting: 'Saludos desde YAML Workflow, '
+      greeting: "Saludos desde YAML Workflow, "
+      message: "#Saludo  ##Saludos desde YAML Workflow"
     transition: GreetPerson
   - name: GreetPerson
     type: operation
